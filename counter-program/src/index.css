@@ -1,0 +1,32 @@
+.container{
+  text-align: center;
+
+  
+}
+.display{
+  font-size: 4rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular';
+  margin-top:10px;
+  margin-bottom: 20px;
+  color: rgb(203, 3, 3);
+}
+button{
+  margin: 4px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: all 0.5s ease;
+  
+
+  background: linear-gradient(180deg, rgb(248, 178, 166), rgb(184, 1, 1));
+  color: white;
+}
+button:hover{
+  background: linear-gradient(180deg, rgb(248, 178, 166), hsl(0, 96%, 28%));
+  transform: scale(1.1);
+}
+button:active{
+  background: linear-gradient(180deg, rgb(248, 178, 166), hsl(0, 96%, 48%));
+  transform: scale(1);
+}
