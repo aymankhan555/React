@@ -6,7 +6,7 @@ function DigitalClock() {
         const timeId = setInterval(() => {
             setTime(new Date());
         }, 1000);
-        console.log('h');
+        
         return () => clearInterval(timeId);
     }, []);
     function render() {
