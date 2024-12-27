@@ -38,10 +38,10 @@ button:hover{
 button:active{
   transform:scale(0.95);
 }
-.add-button{
+.start-button{
   background-color: hsl(120, 73%, 75%);
 }
-.add-button:hover{
+.start-button:hover{
   background-color: hsl(120, 73%, 65%);
 }
 .stop-button{
