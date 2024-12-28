@@ -39,16 +39,20 @@ h1{
   cursor: pointer;
   border-radius: 8px;
   transition: all 0.3s ease;
+  font-size: bold;
+ 
 }
 
 .moves:hover {
-  background-color: hsl(0, 0%, 33%);
+  
   transform: scale(1.1);
+}
+.moves:active{
+  transform: scale(0.9);
 }
 
 .moves:disabled {
-  background-color: hsl(0, 0%, 20%);
-  color: hsl(0, 0%, 40%);
+
   cursor: not-allowed;
 }
 
@@ -67,4 +71,9 @@ h1{
 .reset-button:hover {
   background-color: hsl(0, 65%, 51%);
   transform: scale(1.1);
+}
+.container div {
+  display: flex;
+  justify-content: center;
+
 }
