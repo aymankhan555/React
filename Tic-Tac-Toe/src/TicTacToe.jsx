@@ -43,7 +43,7 @@ function TicTacToe() {
 			setMoveX('WINNER');
 		}
 		else {
-			setMoveO('Winner');
+			setMoveO('WINNER');
 		}
 		document.querySelectorAll('.moves').forEach(button=>{
 			button.disabled=true;
