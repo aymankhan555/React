@@ -60,14 +60,15 @@ function TicTacToe() {
 		<div className="container">
 			<h1>Tic-Tac-Toe</h1>
 			<div className="info">
-				<h2>{moveX} </h2>
-				<h2>{moveO}</h2>
+				<h2 style={{color:"lightblue"}}>{moveX} </h2>
+				<h2 style={{color:"pink"}}>{moveO}</h2>
 			</div>
 			<div className="row">
 				{board.slice(0, 3).map((object, index) => (
 					<button key={index} className="moves"
 						disabled={object !== ''}
-						onClick={() => handleMoves(index)}>{object}</button>
+						onClick={() => handleMoves(index)}
+						style={{color: object==='X'?"lightblue":object==='O'?'pink':'white'}}>{object}</button>
 				))}
 			</div>
 			<div className="row">
@@ -75,7 +76,7 @@ function TicTacToe() {
 					<button key={index + 3} className="moves"
 						disabled={object !== ''}
 						onClick={() => handleMoves(index + 3)}
-					>{object}</button>
+						style={{color: object==='X'?"lightblue":object==='O'?'pink':'white'}}>{object}</button>
 				))}
 			</div>
 			<div className="row">
@@ -83,7 +84,7 @@ function TicTacToe() {
 					<button key={index + 6} className="moves"
 						disabled={object != ''}
 						onClick={() => handleMoves(index + 6)}
-					>{object}</button>
+						style={{color: object==='X'?"lightblue":object==='O'?'pink':'white'}}>{object}</button>
 				))}
 			</div>
 
