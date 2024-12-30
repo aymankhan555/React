@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 function ExpenseTracker() {
 
 	const [expenseList, setExpenseList] = useState([{
@@ -14,6 +14,10 @@ function ExpenseTracker() {
 	const [description,setDescription]=useState("");
 	const [category,setCategory]=useState("Food");
 	const [amount,setAmount]=useState(0.00);
+	const [totalExpense,setTotalExpense] =useState(0.00);
+	useEffect(()=>{
+		calculate();
+	},[expenseList]);
 	function handleDescription(e)
 	{
 		setDescription(e.target.value);
@@ -31,9 +35,10 @@ function ExpenseTracker() {
 		const newExpenseList={
 			description,
 			category,
-			amount
-		}
+			amount:parseFloat(amount),
+		};
 		setExpenseList([...expenseList,newExpenseList]);
+
 	
 	}
 	function deleteExpenseList(index)
@@ -41,6 +46,16 @@ function ExpenseTracker() {
 		const newExpenseList = expenseList.filter((_,i)=>i!==index)
 		setExpenseList(newExpenseList);
 	}
+	function calculate()
+	{
+		let sum=0;
+		expenseList.forEach((object,i)=>{
+			sum+=object.amount;
+		});
+		setTotalExpense(sum);
+		console.log(sum);
+	}
+
 	return (
 		<div className="expense-tracker">
 			<div className="header">
@@ -71,10 +86,11 @@ function ExpenseTracker() {
 					<option value="transport">Transport</option>
 					<option value="others">Others</option>
 				</select>
-				<input type="number" onChange={handleAmount} className="amount-input"/>
+				<input type="number" onChange={handleAmount} className="amount-input"
+				min="0.0"/>
 				<button onClick={addExpenseList} className="add-button">Add</button>
 			</div>
-
+				<div className="display-total" onClick={calculate}>Total: ${totalExpense}</div>
 		</div>
 	);
 }

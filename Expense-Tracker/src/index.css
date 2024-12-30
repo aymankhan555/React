@@ -93,3 +93,8 @@ body {
   background-color: hsl(207, 100%, 63%);
 }
 
+.display-total{
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-top:20px;
+}
