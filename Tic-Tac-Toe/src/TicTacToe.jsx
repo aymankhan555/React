@@ -37,6 +37,20 @@ function TicTacToe() {
 			}
 
 		});
+		if(isBoardFull())
+		{
+			setMoveX('Draw');
+			setMoveO('Draw');
+			document.querySelectorAll('.moves').forEach(button=>{
+				button.disabled=true;
+			});
+			
+		}
+
+	}
+	function isBoardFull()
+	{
+		return board.every(cell=>cell!=='');
 	}
 	function showResult() {
 		if (currentMove == 'X') {
