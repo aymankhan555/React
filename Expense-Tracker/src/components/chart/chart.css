@@ -21,9 +21,7 @@
  {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
-
+ 
 
  }
   .chart-details .food,.transport,.cloths,.others,.none
@@ -39,7 +37,7 @@
   }
  .chart-details span{
   font-weight: bold;
-  margin: 0;
+  margin-left: 20px;
  }
  .chart-details .food
  {
