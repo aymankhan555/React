@@ -3,14 +3,14 @@ import Chart from "./chart";
 function ExpenseTracker() {
 
 	const [expenseList, setExpenseList] = useState([{
-		description: 'steak',
+		description: 'Dinner',
 		category: 'food',
 		amount: 12.50
 	},
 	{
-		description: 'bus fare',
+		description: 'Taxi fare',
 		category: 'transport',
-		amount: 3.00
+		amount: 4.99
 	}]);
 	const [description,setDescription]=useState("");
 	const [category,setCategory]=useState("Food");
@@ -92,7 +92,7 @@ function ExpenseTracker() {
 				min="0.0"/>
 				<button onClick={addExpenseList} className="add-button">Add</button>
 			</div>
-				<div className="display-total" onClick={calculate}>Total: ${totalExpense}</div>
+				<div className="display-total" onClick={calculate}>Total: ${totalExpense.toFixed(2)}</div>
 
 			<Chart expenseList={expenseList} totalExpense={totalExpense}/>
 		</div>
