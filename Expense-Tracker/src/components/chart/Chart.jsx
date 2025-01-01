@@ -39,23 +39,26 @@ function Chart({ expenseList, totalExpense }) {
             <div className="chart" style={chartStyle}>
             </div>
             <div className="chart-details">
-                <div>
+                <div className="details">
                     <div className="food"></div>
-                    <span>{`${foodPercentage.toFixed(2)}%`}</span>
+                    <span>{`Food: ${foodPercentage.toFixed(2)}%`}</span>
                 </div>
-                <div>
+                <div className="details">
                     <div className="transport"></div>
-                    <span>{`${transportPercentage.toFixed(2)}%`}</span>
+                    <span>{`Transport: ${transportPercentage.toFixed(2)}%`}</span>
                 </div>
-                <div>
+                <div className="details">
                     <div className="cloths"></div>
-                    <span>{`${clothsPercentage.toFixed(2)}%`}</span>
+                    <span>{`Cloths: ${clothsPercentage.toFixed(2)}%`}</span>
                 </div>
-                <div>
+                <div className="details">
                     <div className="others"></div>
-                    <span>{`${othersPercentage.toFixed(2)}%`}</span>
+                    <span>{`Others: ${othersPercentage.toFixed(2)}%`}</span>
                 </div>
-
+                <div className="details">
+                    <div className="none"></div>
+                    <span>{`NO DATA`}</span>
+                </div>
             </div>
         </div>
 
