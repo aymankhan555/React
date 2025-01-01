@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import './Chart.css';
 
 function Chart({ expenseList, totalExpense }) {
 
@@ -37,6 +37,25 @@ function Chart({ expenseList, totalExpense }) {
     return (
         <div className="chart-container">
             <div className="chart" style={chartStyle}>
+            </div>
+            <div className="chart-details">
+                <div>
+                    <div className="food"></div>
+                    <span>{`${foodPercentage.toFixed(2)}%`}</span>
+                </div>
+                <div>
+                    <div className="transport"></div>
+                    <span>{`${transportPercentage.toFixed(2)}%`}</span>
+                </div>
+                <div>
+                    <div className="cloths"></div>
+                    <span>{`${clothsPercentage.toFixed(2)}%`}</span>
+                </div>
+                <div>
+                    <div className="others"></div>
+                    <span>{`${othersPercentage.toFixed(2)}%`}</span>
+                </div>
+
             </div>
         </div>
 

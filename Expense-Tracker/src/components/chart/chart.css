@@ -1,0 +1,13 @@
+/* chart */
+  
+.chart {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.05);
+    border: 5px solid hsl(0, 0%, 80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

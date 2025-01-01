@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from "react";
-import Chart from "./chart";
+import Chart from "../chart/Chart";
+import './ExpenseTracker.css';
 function ExpenseTracker() {
 
 	const [expenseList, setExpenseList] = useState([{
@@ -13,7 +14,7 @@ function ExpenseTracker() {
 		amount: 4.99
 	}]);
 	const [description,setDescription]=useState("");
-	const [category,setCategory]=useState("Food");
+	const [category,setCategory]=useState("others");
 	const [amount,setAmount]=useState(0.00);
 	const [totalExpense,setTotalExpense] =useState(0.00);
 	useEffect(()=>{
@@ -54,7 +55,7 @@ function ExpenseTracker() {
 			sum+=object.amount;
 		});
 		setTotalExpense(sum);
-		console.log(sum);
+		
 	}
 
 	return (

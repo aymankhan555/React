@@ -1,5 +1,5 @@
-import ExpenseTracker from "./ExpenseTracker"
-import Chart from "./chart";
+import ExpenseTracker from "./components/ExpenseTracker/ExpenseTracker";
+
 function App() {
   return(
     <>
