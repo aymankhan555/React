@@ -1,4 +1,5 @@
 import React, { useState,useEffect } from "react";
+import Chart from "./chart";
 function ExpenseTracker() {
 
 	const [expenseList, setExpenseList] = useState([{
@@ -81,16 +82,19 @@ function ExpenseTracker() {
 
 				<select name="category" id="category"
 				onChange={handelCategory} className="category-input">
+					<option value="others">Others</option>
 					<option value="food">Food</option>\
 					<option value="cloths">Cloths</option>
 					<option value="transport">Transport</option>
-					<option value="others">Others</option>
+					
 				</select>
 				<input type="number" onChange={handleAmount} className="amount-input"
 				min="0.0"/>
 				<button onClick={addExpenseList} className="add-button">Add</button>
 			</div>
 				<div className="display-total" onClick={calculate}>Total: ${totalExpense}</div>
+
+			<Chart expenseList={expenseList} totalExpense={totalExpense}/>
 		</div>
 	);
 }
