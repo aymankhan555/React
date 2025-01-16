@@ -23,7 +23,7 @@ function TodoList() {
 	function deleteList(index) {
 		const updatedTasks = tasks.filter((_, i) => i !== index);
 		setTasks(updatedTasks);
-		toast.info('List is deleted');
+		toast.warning('List is deleted');
 
 	}
 	function moveUp(index) {
