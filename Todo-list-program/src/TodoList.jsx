@@ -14,6 +14,10 @@ function TodoList() {
 			setNewTask("");
 			toast.success('List is added');
 		}
+		else
+		{
+			toast.error('Please enter a task');
+		}
 
 	}
 	function deleteList(index) {
