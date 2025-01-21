@@ -1,6 +1,9 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-import { UpperCase, LowerCase, SpecialChar, Numbers } from './data/password.jsx'
+import { UpperCase, LowerCase, SpecialChar, Numbers } from './data/password.jsx';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
 
   let [upperCase, setUpperCase] = useState(false);
@@ -32,19 +35,22 @@ function App() {
         
       }
       setPassword(temp);
-      console.log(password);
+      toast.success('Password Generated Successfully');
     }
 
     else {
-      alert('Please select atleast one character type');
+      toast.error('Please select atleast one option');
     }
 
   }
   let copyPass = () => {
     navigator.clipboard.writeText(password);
+    toast.info('Password Copied');
   }
   return (
+  
     <div className='container'>
+      <ToastContainer />
       <h2>Password Generator</h2>
       <div className='display'>
         <input type="text" readOnly value={password}/>
