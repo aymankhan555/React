@@ -14,9 +14,9 @@ function App() {
   let [password, setPassword] = useState('');
 
   let createPassword = () => {
-    
+
     let allowedChars = '';
-    let temp='';
+    let temp = '';
     if (upperCase || lowerCase || numbers || specialChar) {
       if (upperCase) {
         allowedChars += UpperCase;
@@ -28,11 +28,11 @@ function App() {
         allowedChars += Numbers;
       }
       if (specialChar) {
-        allowedChars +=  SpecialChar;
+        allowedChars += SpecialChar;
       }
-      for(let i=0;i<passwordLength;i++){
-        temp+=allowedChars.charAt(Math.random()*allowedChars.length)
-        
+      for (let i = 0; i < passwordLength; i++) {
+        temp += allowedChars.charAt(Math.random() * allowedChars.length)
+
       }
       setPassword(temp);
       toast.success('Password Generated Successfully');
@@ -48,12 +48,22 @@ function App() {
     toast.info('Password Copied');
   }
   return (
-  
+
     <div className='container'>
-      <ToastContainer />
+      <ToastContainer
+        autoClose={5000}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
+
       <h2>Password Generator</h2>
       <div className='display'>
-        <input type="text" readOnly value={password}/>
+        <input type="text" readOnly value={password} />
         <button onClick={copyPass}>Copy</button>
       </div>
 
