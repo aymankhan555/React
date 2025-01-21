@@ -9,6 +9,7 @@ function App() {
   let [specialChar, setSpecialChar] = useState(false);
   let [passwordLength, setPasswordLength] = useState(10);
   let [password, setPassword] = useState('');
+
   let createPassword = () => {
     
     let allowedChars = '';
@@ -39,13 +40,15 @@ function App() {
     }
 
   }
-
+  let copyPass = () => {
+    navigator.clipboard.writeText(password);
+  }
   return (
     <div className='container'>
       <h2>Password Generator</h2>
       <div className='display'>
         <input type="text" readOnly value={password}/>
-        <button>Copy</button>
+        <button onClick={copyPass}>Copy</button>
       </div>
 
       <div className='passwordLength'>
