@@ -1,0 +1,95 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, hsl(270, 100%, 50%), hsl(293, 100%, 50%));
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #00c9ff, #92fe9d);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+.display input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: center;
+  
+}
+.display button{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  background: linear-gradient(135deg, rgb(127, 0, 255), rgb(225, 0, 255));
+  color: white;
+  transition: all 0.3s ease;
+}
+.check,.passwordLength{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  color: hwb(0 27% 73%);
+}
+
+.passwordLength input{
+  width: 50px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.check input[type="checkbox"] {
+  accent-color: hsl(270, 100%, 50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.btn {
+  background: linear-gradient(135deg, rgb(127, 0, 255), rgb(225, 0, 255));
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover ,.display button:hover{
+  transform: scale(1.05);
+  background: linear-gradient(135deg, rgb(225, 0, 255), rgb(127, 0, 255));
+}
+
+
